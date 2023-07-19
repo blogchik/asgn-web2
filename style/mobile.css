@@ -1,0 +1,68 @@
+/* xs */
+/* @media (min-width: 475px) {} */
+
+/* sm */
+/* @media (min-width: 640px) {} */
+
+/* md */
+/* @media (min-width: 768px) {} */
+
+/* lg */
+/* @media (min-width: 1024px) {} */
+
+/* xl */
+/* @media (min-width: 1280px) {} */
+
+/* 2xl */
+/* @media (min-width: 1536px) {} */
+
+@media (min-width: 1024px) {
+
+    .container section.products .items
+    {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .container section
+    {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    header .side.menu
+    {
+        display: flex;
+    }
+
+    .container section
+    {
+        flex-direction: row;
+    }
+
+    .container section .side .purchases
+    {
+        flex-direction: row;
+    }
+
+    .btnn
+    {
+        margin-top: 0;
+    }
+
+    .container section .side .socials
+    {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        align-items: unset;
+        justify-content: unset;
+        gap: 10px;
+        margin-bottom: 0;
+    }
+
+}

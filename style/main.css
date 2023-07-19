@@ -1,0 +1,676 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css');
+
+:root
+{
+    --clr-light: #fff;
+    --clr-light-low: rgba(255, 255, 255, 0.50);
+    --clr-dark: #111;
+    --clr-primary: #00296B;
+    --clr-primary-low: rgba(0, 41, 107, 0.70);
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    background-color: var(--clr-light);
+    font-family: 'Montserrat', sans-serif;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    line-height: calc(1em + 0.5rem);
+}
+
+img,
+picture,
+video,
+canvas,
+svg
+{
+    display: block;
+    max-width: 100%;
+    user-select: none;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+header
+{
+    display: flex;
+    position: sticky;
+    flex-direction: row;
+    left: 0;
+    top: 0;
+    width: auto;
+    height: 60px;
+    background-color: var(--clr-light-low);
+    backdrop-filter: blur(12.5px);
+    overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+}
+
+header .side
+{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: auto;
+}
+
+header .side .logo
+{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--clr-primary);
+    gap: 10px;
+}
+
+header .side .logo img
+{
+    max-height: 30px;
+}
+
+header .side.menu
+{
+    display: none;
+    gap: 20px;
+}
+
+header .side.menu .menu-item
+{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-primary);
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s all ease-in-out;
+}
+
+header .side.menu .menu-item:hover, header .side.menu .menu-item:active, header .side.menu .menu-item:focus
+{
+    border-bottom: 2px solid var(--clr-primary);
+}
+
+.container
+{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: unset;
+    justify-content: unset;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: calc(100vw - 40px);
+    height: auto;
+    overflow-x: hidden;
+}
+
+.container section
+{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: auto;
+    min-height: calc(100vh - 40px);
+    overflow-x: hidden;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container .home
+{
+    height: calc(100vh - 60px);
+}
+
+.container section .side
+{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex: 0.5;
+}
+
+.container section .side .image
+{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;   
+    width: max-content;
+    height: max-content;
+    padding: 20px;
+    border: 1px solid var(--clr-primary);
+    overflow: hidden;
+    border-radius: 2px;
+    transition: 0.3s all ease-in-out;
+}
+
+.container section .side .image:hover  img
+{
+    transform: scale(1.1);
+}
+
+.container section .side .image img
+{
+    max-width: 40vw;
+    transition: 0.3s all ease-in-out;
+}
+
+.container section .side .title
+{
+    font-size: 44px;
+    font-weight: 600;
+    color: var(--clr-primary);
+    text-overflow: ellipsis;
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+
+.container section .side .description
+{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--clr-dark);
+    text-overflow: ellipsis;
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+
+.container section .side .btn
+{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--clr-light);
+    background-color: var(--clr-primary);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    transition: 0.3s all ease-in-out;
+}
+
+.container section .side .btn:hover, .container section .side .btn:active, .container section .side .btn:focus
+{
+    border: 1px solid var(--clr-primary);
+    color: var(--clr-primary);
+    background-color: transparent;
+}
+
+.container section.skills
+{
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container section.skills .side
+{
+    flex: 0.3;
+}
+
+.container section.skills .side .description
+{
+    width: 60%;
+}
+
+.container section .side .stats
+{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+}
+
+.container section .side .stats .stat
+{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: auto;
+    height: auto;
+    background-color: var(--clr-primary);
+    color: var(--clr-light);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid var(--clr-light);
+}
+
+.container section .side .stats .stat .title
+{
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--clr-light);
+}
+
+.container section .side .stats .stat .value
+{
+    font-size: 26px;
+    font-weight: 500;
+    color: var(--clr-light);
+}
+
+.container section.services
+{
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container section .side .purchases
+{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.container section.services .side .description
+{
+    width: 60%;
+}
+
+.container section .side .purchases .plan
+{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 250px;
+    height: 400px;
+    border-radius: 2px;
+    background-color: var(--clr-primary);
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid transparent;
+}
+
+.container section .side .purchases .plan .title
+{
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--clr-light);
+}
+
+.container section .side .purchases .plan .price
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 44px;
+    font-weight: 600;
+    color: var(--clr-light);
+}
+
+.container section .side .purchases .plan .price span
+{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.container section .side .purchases .plan .description
+{
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--clr-light);
+}
+
+.container section .side .purchases .plan .details
+{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--clr-light);
+    border-bottom: 1px solid var(--clr-light);
+    transition: 0.3s all ease-in-out;
+}
+
+.container section .side .purchases .plan .details:hover, .container section .side .purchases .plan .details:active, .container section .side .purchases .plan .details:focus
+{
+    font-weight: 600;
+    border-bottom: 2px solid var(--clr-light);
+}
+
+.container section .side .purchases .plan .btn
+{
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--clr-primary);
+    background-color: var(--clr-light);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    transition: 0.3s all ease-in-out;
+}
+
+.container section .side .purchases .plan .btn:hover, .container section .side .purchases .plan .btn:active, .container section .side .purchases .plan .btn:focus
+{
+    background-color: transparent;
+    color: var(--clr-light);
+    border: 1px solid var(--clr-light);
+}
+
+.container section.products
+{
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container section .items
+{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.container section .items .item
+{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 220px;
+    overflow: hidden;
+}
+
+.container section .items .item .image
+{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+}
+
+.container section .items .item .image img
+{
+    max-width: 100%;
+}
+
+.container section .items .item .info
+{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+}
+
+.container section .items .item .info .title
+{
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--clr-primary);
+}
+
+.container section .items .item .actions .btn
+{
+    font-size: 18px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.container section.products .side .btnn
+{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    font-weight: 400;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 2px;
+    background-color: transparent;
+    border: 1px solid var(--clr-primary);
+    color: var(--clr-primary);
+    transition: 0.3s all ease-in-out;
+}
+
+.container section.products .side .btnn:hover, .container section.products .side .btnn:active, .container section.products .side .btnn:focus
+{
+    background-color: var(--clr-primary);
+    border: 1px solid transparent;
+    color: var(--clr-light);
+}
+
+.container section .side .socials
+{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: unset;
+    justify-content: unset;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.container section .side .social
+{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: unset;
+    width: auto;
+    height: auto;
+    gap: 6px;
+}
+
+.container section .side .social i
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-primary);
+}
+
+.container section .side .social a
+{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--clr-primary);
+    border-bottom: 1px solid transparent;
+    transition: 0.3s all ease-in-out;
+}
+
+.container section .side .social a:hover, .container section .side .social a:focus, .container section .side .social a:active
+{
+    border-bottom: 1px solid var(--clr-primary);
+}
+
+.container section .side form
+{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: auto;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--clr-primary);
+    border-radius: 2px;
+}
+
+.container section .side form .title
+{
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--clr-light);
+}
+
+.container section .side form div
+{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: unset;
+    justify-content: unset;
+    width: 100%;
+}
+
+.container section .side form label
+{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--clr-light);
+}
+
+.container section .side form input
+{
+    font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid var(--clr-light);
+    border-radius: 2px;
+    background-color: transparent;
+    color: var(--clr-light);
+    outline: none;
+    transition: 0.3s all ease-in-out;
+}
+
+.container section .side form input:hover, .container section .side form input:focus, .container section .side form input:active
+{
+    background-color: var(--clr-light);
+    color: var(--clr-primary);
+}
+
+.container section .side form textarea
+{
+    width: 100%;
+    height: 200px;
+    font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid var(--clr-light);
+    border-radius: 2px;
+    background-color: transparent;
+    color: var(--clr-light);
+    outline: none;
+    transition: 0.3s all ease-in-out;
+}
+
+.container section .side form textarea:hover, .container section .side form textarea:focus, .container section .side form textarea:active
+{
+    background-color: var(--clr-light);
+    color: var(--clr-primary);
+}
+
+.container section .side form button
+{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--clr-primary);
+    background-color: var(--clr-light);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 2px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: 0.3s all ease-in-out;
+}
+
+.container section .side form button:hover, .container section .side form button:focus, .container section .side form button:active
+{
+    background-color: transparent;
+    border: 1px solid var(--clr-light);
+    color: var(--clr-light);
+}
+
+.btnn
+{
+    margin-top: 20px;
+}
